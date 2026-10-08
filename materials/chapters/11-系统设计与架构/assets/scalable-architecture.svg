@@ -1,0 +1,83 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 680' width='960' height='680' role='img' aria-label='典型可扩展架构全貌图'>
+  <rect width='960' height='680' fill='#f8fafc'/>
+  <defs>
+    <marker id='a' markerWidth='10' markerHeight='10' refX='6' refY='3' orient='auto'>
+      <path d='M0,0 L6,3 L0,6 Z' fill='#94a3b8'/>
+    </marker>
+  </defs>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='42' font-size='22' font-weight='700' fill='#0f172a'>可扩展架构全貌：无状态应用 + 分层缓存 + 异步化 + 可观测</text>
+
+    <rect x='60' y='66' width='240' height='56' rx='10' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='180' y='92' text-anchor='middle' font-size='15' font-weight='700' fill='#1d4ed8'>客户端</text>
+    <text x='180' y='112' text-anchor='middle' font-size='11' fill='#334155'>浏览器 / App / 第三方调用</text>
+
+    <rect x='360' y='66' width='240' height='56' rx='10' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='480' y='92' text-anchor='middle' font-size='15' font-weight='700' fill='#6d28d9'>CDN 边缘缓存</text>
+    <text x='480' y='112' text-anchor='middle' font-size='11' fill='#334155'>静态资源 / 图片 / 视频</text>
+
+    <rect x='660' y='66' width='240' height='56' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/>
+    <text x='780' y='92' text-anchor='middle' font-size='15' font-weight='700' fill='#0369a1'>对象存储</text>
+    <text x='780' y='112' text-anchor='middle' font-size='11' fill='#334155'>上传文件 / 备份</text>
+
+    <rect x='60' y='158' width='840' height='58' rx='10' fill='#0f172a'/>
+    <text x='480' y='184' text-anchor='middle' font-size='16' font-weight='700' fill='#ffffff'>负载均衡 + API 网关</text>
+    <text x='480' y='205' text-anchor='middle' font-size='11' fill='#cbd5e1'>健康检查 · 路由 · 认证鉴权 · 限流 · 请求日志 · 灰度分流</text>
+
+    <rect x='60' y='252' width='260' height='58' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='190' y='278' text-anchor='middle' font-size='14' font-weight='700' fill='#047857'>应用实例 1（无状态）</text>
+    <text x='190' y='298' text-anchor='middle' font-size='11' fill='#334155'>可直接水平扩容</text>
+
+    <rect x='350' y='252' width='260' height='58' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='480' y='278' text-anchor='middle' font-size='14' font-weight='700' fill='#047857'>应用实例 2（无状态）</text>
+    <text x='480' y='298' text-anchor='middle' font-size='11' fill='#334155'>会话存 Redis 或令牌</text>
+
+    <rect x='640' y='252' width='260' height='58' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='770' y='278' text-anchor='middle' font-size='14' font-weight='700' fill='#047857'>应用实例 3（无状态）</text>
+    <text x='770' y='298' text-anchor='middle' font-size='11' fill='#334155'>滚动发布 / 快速回滚</text>
+
+    <rect x='60' y='348' width='260' height='58' rx='10' fill='#fffbeb' stroke='#d97706' stroke-width='2'/>
+    <text x='190' y='374' text-anchor='middle' font-size='14' font-weight='700' fill='#b45309'>分布式缓存 Redis</text>
+    <text x='190' y='394' text-anchor='middle' font-size='11' fill='#334155'>热点数据 · 写后删除 · 随机 TTL</text>
+
+    <rect x='350' y='348' width='260' height='58' rx='10' fill='#ffe4e6' stroke='#e11d48' stroke-width='2'/>
+    <text x='480' y='374' text-anchor='middle' font-size='14' font-weight='700' fill='#be123c'>消息队列</text>
+    <text x='480' y='394' text-anchor='middle' font-size='11' fill='#334155'>削峰 · 解耦 · 至少一次投递</text>
+
+    <rect x='640' y='348' width='260' height='58' rx='10' fill='#ffe4e6' stroke='#e11d48' stroke-width='2'/>
+    <text x='770' y='374' text-anchor='middle' font-size='14' font-weight='700' fill='#be123c'>消费者 Worker</text>
+    <text x='770' y='394' text-anchor='middle' font-size='11' fill='#334155'>幂等消费 · 重试退避 · 死信队列</text>
+
+    <rect x='60' y='444' width='260' height='58' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/>
+    <text x='190' y='470' text-anchor='middle' font-size='14' font-weight='700' fill='#1d4ed8'>主数据库（写）</text>
+    <text x='190' y='490' text-anchor='middle' font-size='11' fill='#334155'>索引 · 事务 · 唯一约束兜底</text>
+
+    <rect x='350' y='444' width='260' height='58' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/>
+    <text x='480' y='470' text-anchor='middle' font-size='14' font-weight='700' fill='#1d4ed8'>只读副本 / 分片</text>
+    <text x='480' y='490' text-anchor='middle' font-size='11' fill='#334155'>读扩散 · 注意复制延迟</text>
+
+    <rect x='640' y='444' width='260' height='58' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/>
+    <text x='770' y='470' text-anchor='middle' font-size='14' font-weight='700' fill='#1d4ed8'>搜索 / 分析存储</text>
+    <text x='770' y='490' text-anchor='middle' font-size='11' fill='#334155'>全文检索 · 报表 · 最终一致</text>
+
+    <rect x='60' y='540' width='840' height='58' rx='10' fill='#f1f5f9' stroke='#64748b' stroke-width='2'/>
+    <text x='480' y='566' text-anchor='middle' font-size='15' font-weight='700' fill='#0f172a'>可观测性：结构化日志 · 指标（p95/p99） · 链路追踪（traceId） · 告警</text>
+    <text x='480' y='587' text-anchor='middle' font-size='11' fill='#475569'>四黄金指标：延迟 · 流量 · 错误 · 饱和度　|　任何一层都必须设超时与降级</text>
+
+    <path d='M180 124 L180 154' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M480 124 L480 154' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M780 124 L780 154' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M190 218 L190 248' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M480 218 L480 248' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M770 218 L770 248' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M190 312 L190 344' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M480 312 L480 344' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M770 312 L770 344' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M770 408 L770 440' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <path d='M190 408 L190 440' stroke='#94a3b8' stroke-width='2' marker-end='url(#a)'/>
+    <text x='216' y='430' font-size='11' fill='#64748b'>回源</text>
+
+    <rect x='60' y='620' width='840' height='48' rx='10' fill='#ffffff' stroke='#d97706' stroke-width='2'/>
+    <text x='80' y='650' font-size='13' font-weight='700' fill='#b45309'>扩展顺序：先加索引与缓存 → 读写分离 → 异步化 → 分片 → 最后才考虑拆服务；每一步都要用数据证明必要性</text>
+  </g>
+</svg>

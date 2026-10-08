@@ -1,0 +1,46 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 470' width='960' height='470' role='img' aria-label='React 单向数据流与渲染时机图'>
+  <rect width='960' height='470' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='46' font-size='22' font-weight='700' fill='#0f172a'>React 单向数据流：UI = f(state)</text>
+
+    <rect x='40' y='90' width='200' height='96' rx='10' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='140' y='126' text-anchor='middle' font-size='15' font-weight='700' fill='#1d4ed8'>state / props</text>
+    <text x='140' y='152' text-anchor='middle' font-size='12' fill='#334155'>唯一数据来源</text>
+    <text x='140' y='172' text-anchor='middle' font-size='12' fill='#64748b'>不可直接修改</text>
+
+    <rect x='300' y='90' width='200' height='96' rx='10' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='400' y='126' text-anchor='middle' font-size='15' font-weight='700' fill='#6d28d9'>渲染 / 协调</text>
+    <text x='400' y='152' text-anchor='middle' font-size='12' fill='#334155'>重新执行组件函数</text>
+    <text x='400' y='172' text-anchor='middle' font-size='12' fill='#64748b'>Diff 旧树与新树</text>
+
+    <rect x='560' y='90' width='200' height='96' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='660' y='126' text-anchor='middle' font-size='15' font-weight='700' fill='#047857'>DOM 更新</text>
+    <text x='660' y='152' text-anchor='middle' font-size='12' fill='#334155'>只应用差异部分</text>
+    <text x='660' y='172' text-anchor='middle' font-size='12' fill='#64748b'>浏览器布局与绘制</text>
+
+    <rect x='820' y='90' width='100' height='96' rx='10' fill='#0f172a'/>
+    <text x='870' y='130' text-anchor='middle' font-size='15' font-weight='700' fill='#ffffff'>用户</text>
+    <text x='870' y='156' text-anchor='middle' font-size='12' fill='#cbd5e1'>看到界面</text>
+
+    <path d='M244 138 L296 138' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M504 138 L556 138' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M764 138 L816 138' stroke='#94a3b8' stroke-width='2'/>
+
+    <path d='M870 200 L870 240 L140 240 L140 190' fill='none' stroke='#d97706' stroke-width='2' stroke-dasharray='6 4'/>
+    <text x='505' y='262' text-anchor='middle' font-size='13' font-weight='700' fill='#b45309'>用户操作 → setState / dispatch → 触发下一轮渲染（数据始终单向流动）</text>
+
+    <rect x='40' y='292' width='430' height='150' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='60' y='322' font-size='16' font-weight='700' fill='#1d4ed8'>会触发重新渲染</text>
+    <text x='60' y='350' font-size='13' fill='#334155'>setState 传入了新值（引用不同）</text>
+    <text x='60' y='376' font-size='13' fill='#334155'>父组件渲染且未用 memo 包裹</text>
+    <text x='60' y='402' font-size='13' fill='#334155'>context 值发生变化</text>
+    <text x='60' y='428' font-size='13' fill='#334155'>useReducer 返回了新状态</text>
+
+    <rect x='490' y='292' width='430' height='150' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='510' y='322' font-size='16' font-weight='700' fill='#047857'>不会触发重新渲染</text>
+    <text x='510' y='350' font-size='13' fill='#334155'>改 useRef.current</text>
+    <text x='510' y='376' font-size='13' fill='#334155'>直接修改原对象字段（引用没变）</text>
+    <text x='510' y='402' font-size='13' fill='#334155'>setState 传入与当前相同的原始值</text>
+    <text x='510' y='428' font-size='13' fill='#64748b'>→ 界面不会更新，这是新手最常见的坑</text>
+  </g>
+</svg>

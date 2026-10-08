@@ -1,0 +1,54 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 420' width='960' height='420' role='img' aria-label='CI/CD 流水线示意图'>
+  <rect width='960' height='420' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='46' font-size='22' font-weight='700' fill='#0f172a'>从提交到上线：流水线六阶段</text>
+
+    <rect x='40' y='90' width='130' height='86' rx='10' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='105' y='124' text-anchor='middle' font-size='14' font-weight='700' fill='#1d4ed8'>git push</text>
+    <text x='105' y='148' text-anchor='middle' font-size='11' fill='#334155'>或开 PR</text>
+
+    <rect x='200' y='90' width='130' height='86' rx='10' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='265' y='118' text-anchor='middle' font-size='14' font-weight='700' fill='#6d28d9'>校验</text>
+    <text x='265' y='142' text-anchor='middle' font-size='11' fill='#334155'>typecheck</text>
+    <text x='265' y='160' text-anchor='middle' font-size='11' fill='#334155'>lint</text>
+
+    <rect x='360' y='90' width='130' height='86' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='425' y='118' text-anchor='middle' font-size='14' font-weight='700' fill='#047857'>测试</text>
+    <text x='425' y='142' text-anchor='middle' font-size='11' fill='#334155'>单元 + 集成</text>
+    <text x='425' y='160' text-anchor='middle' font-size='11' fill='#334155'>必要时 E2E</text>
+
+    <rect x='520' y='90' width='130' height='86' rx='10' fill='#fffbeb' stroke='#d97706' stroke-width='2'/>
+    <text x='585' y='118' text-anchor='middle' font-size='14' font-weight='700' fill='#b45309'>构建</text>
+    <text x='585' y='142' text-anchor='middle' font-size='11' fill='#334155'>产物 + 镜像</text>
+    <text x='585' y='160' text-anchor='middle' font-size='11' fill='#334155'>打 sha 标签</text>
+
+    <rect x='680' y='90' width='130' height='86' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/>
+    <text x='745' y='118' text-anchor='middle' font-size='14' font-weight='700' fill='#0369a1'>部署</text>
+    <text x='745' y='142' text-anchor='middle' font-size='11' fill='#334155'>滚动替换</text>
+    <text x='745' y='160' text-anchor='middle' font-size='11' fill='#334155'>需人工审批</text>
+
+    <rect x='840' y='90' width='80' height='86' rx='10' fill='#0f172a'/>
+    <text x='880' y='124' text-anchor='middle' font-size='13' font-weight='700' fill='#ffffff'>验证</text>
+    <text x='880' y='148' text-anchor='middle' font-size='11' fill='#cbd5e1'>冒烟</text>
+
+    <path d='M172 133 L196 133' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M332 133 L356 133' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M492 133 L516 133' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M652 133 L676 133' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M812 133 L836 133' stroke='#94a3b8' stroke-width='2'/>
+
+    <rect x='40' y='204' width='430' height='86' rx='10' fill='#ffffff' stroke='#e11d48'/>
+    <text x='60' y='232' font-size='14' font-weight='700' fill='#be123c'>任一阶段失败</text>
+    <text x='60' y='256' font-size='12' fill='#334155'>立即停止后续阶段，保留报告与日志</text>
+    <text x='60' y='278' font-size='12' fill='#64748b'>原则：让失败尽可能早、尽可能便宜地暴露</text>
+
+    <rect x='500' y='204' width='420' height='86' rx='10' fill='#ffffff' stroke='#059669'/>
+    <text x='520' y='232' font-size='14' font-weight='700' fill='#047857'>验证失败 → 回滚</text>
+    <text x='520' y='256' font-size='12' fill='#334155'>同一套命令部署上一个 sha，先止血再排查</text>
+    <text x='520' y='278' font-size='12' fill='#64748b'>前提：迁移向前兼容，旧代码能读新结构</text>
+
+    <rect x='40' y='312' width='880' height='72' rx='10' fill='#f1f5f9' stroke='#cbd5e1'/>
+    <text x='60' y='340' font-size='14' font-weight='700' fill='#0f172a'>配套能力</text>
+    <text x='60' y='366' font-size='13' fill='#334155'>配置来自环境变量（构建一次、多处部署）　·　密钥存 CI 密钥库　·　日志含 requestId　·　四黄金指标：延迟、流量、错误、饱和度</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 520' width='960' height='520' role='img' aria-label='服务端请求生命周期示意图'>
+  <rect width='960' height='520' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='46' font-size='22' font-weight='700' fill='#0f172a'>请求在服务端的生命周期</text>
+
+    <rect x='40' y='80' width='880' height='52' rx='10' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='60' y='112' font-size='14' font-weight='700' fill='#1d4ed8'>① 接入：TCP/HTTP 解析 · 分配 requestId · 记录开始时间</text>
+
+    <rect x='40' y='148' width='880' height='52' rx='10' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='60' y='180' font-size='14' font-weight='700' fill='#6d28d9'>② 中间件链：安全头 → CORS → 体积限制 → 限流 → 认证 → 校验</text>
+
+    <rect x='40' y='216' width='880' height='52' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='60' y='248' font-size='14' font-weight='700' fill='#047857'>③ 路由：匹配路径与方法，把参数交给 service（此处不写业务判断）</text>
+
+    <rect x='40' y='284' width='430' height='52' rx='10' fill='#fffbeb' stroke='#d97706' stroke-width='2'/>
+    <text x='60' y='316' font-size='14' font-weight='700' fill='#b45309'>④ 业务 Service：规则、事务、编排</text>
+
+    <rect x='510' y='284' width='410' height='52' rx='10' fill='#ffe4e6' stroke='#e11d48' stroke-width='2'/>
+    <text x='530' y='316' font-size='14' font-weight='700' fill='#be123c'>⑤ 数据 Repository：SQL / ORM 读写</text>
+
+    <rect x='40' y='352' width='880' height='52' rx='10' fill='#e0f2fe' stroke='#0284c7' stroke-width='2'/>
+    <text x='60' y='384' font-size='14' font-weight='700' fill='#0369a1'>⑥ 响应：序列化 · 设置状态码与 Location · 写访问日志（含耗时）</text>
+
+    <rect x='40' y='420' width='880' height='72' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='60' y='450' font-size='14' font-weight='700' fill='#0f172a'>⑦ 任何一步抛错 → 统一错误处理中间件</text>
+    <text x='60' y='476' font-size='13' fill='#334155'>可预期错误（AppError，4xx）：返回 code + message + details　|　不可预期错误（5xx）：记堆栈，对外只说 requestId</text>
+  </g>
+</svg>

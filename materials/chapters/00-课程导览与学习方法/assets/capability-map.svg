@@ -1,0 +1,40 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 620' width='960' height='620' role='img' aria-label='全栈工程师能力模型四象限图'>
+  <rect width='960' height='620' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='480' y='46' text-anchor='middle' font-size='26' font-weight='700' fill='#0f172a'>全栈工程师能力模型 · 四象限</text>
+    <text x='480' y='74' text-anchor='middle' font-size='14' fill='#64748b'>缺任何一块，都会在真实项目里被卡住</text>
+
+    <rect x='70' y='96' width='330' height='148' rx='12' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='94' y='138' font-size='20' font-weight='700' fill='#1d4ed8'>语言与框架</text>
+    <text x='94' y='168' font-size='14' fill='#334155'>HTML / CSS / JavaScript / TypeScript</text>
+    <text x='94' y='194' font-size='14' fill='#334155'>React 组件化与状态管理</text>
+    <text x='94' y='220' font-size='14' fill='#334155'>Node.js 服务端编程</text>
+    <text x='390' y='234' text-anchor='end' font-size='12' fill='#1d4ed8'>第 02–06 章</text>
+
+    <rect x='560' y='96' width='330' height='148' rx='12' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='584' y='138' font-size='20' font-weight='700' fill='#047857'>工程与交付</text>
+    <text x='584' y='168' font-size='14' fill='#334155'>Git 协作与分支策略</text>
+    <text x='584' y='194' font-size='14' fill='#334155'>构建工具、包管理与测试</text>
+    <text x='584' y='220' font-size='14' fill='#334155'>Docker 容器化与 CI/CD 部署</text>
+    <text x='880' y='234' text-anchor='end' font-size='12' fill='#047857'>第 01、04、09、10 章</text>
+
+    <rect x='70' y='392' width='330' height='148' rx='12' fill='#fffbeb' stroke='#d97706' stroke-width='2'/>
+    <text x='94' y='434' font-size='20' font-weight='700' fill='#b45309'>数据与架构</text>
+    <text x='94' y='464' font-size='14' fill='#334155'>SQL 与数据建模、索引与事务</text>
+    <text x='94' y='490' font-size='14' fill='#334155'>缓存与性能优化</text>
+    <text x='94' y='516' font-size='14' fill='#334155'>系统设计、可扩展性与设计模式</text>
+    <text x='390' y='530' text-anchor='end' font-size='12' fill='#b45309'>第 07、11 章</text>
+
+    <rect x='560' y='392' width='330' height='148' rx='12' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='584' y='434' font-size='20' font-weight='700' fill='#6d28d9'>协作与表达</text>
+    <text x='584' y='464' font-size='14' fill='#334155'>安全意识与工程规范</text>
+    <text x='584' y='490' font-size='14' fill='#334155'>代码评审、文档与方案表达</text>
+    <text x='584' y='516' font-size='14' fill='#334155'>面试表达与作品集</text>
+    <text x='880' y='530' text-anchor='end' font-size='12' fill='#6d28d9'>第 08、12、13 章</text>
+
+    <circle cx='480' cy='318' r='70' fill='#0f172a'/>
+    <text x='480' y='310' text-anchor='middle' font-size='17' font-weight='700' fill='#ffffff'>全栈</text>
+    <text x='480' y='334' text-anchor='middle' font-size='17' font-weight='700' fill='#ffffff'>工程师</text>
+    <text x='480' y='586' text-anchor='middle' font-size='14' fill='#475569'>深度：至少一个方向能独立设计并交付　·　广度：其余方向能读懂、能改动、能协作</text>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 440' width='960' height='440' role='img' aria-label='前端构建流水线示意图'>
+  <rect width='960' height='440' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='46' font-size='22' font-weight='700' fill='#0f172a'>从源码到上线：构建流水线</text>
+
+    <rect x='40' y='90' width='150' height='90' rx='10' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='115' y='126' text-anchor='middle' font-size='15' font-weight='700' fill='#1d4ed8'>源码</text>
+    <text x='115' y='152' text-anchor='middle' font-size='12' fill='#334155'>TS / JSX / CSS</text>
+
+    <rect x='230' y='90' width='150' height='90' rx='10' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='305' y='126' text-anchor='middle' font-size='15' font-weight='700' fill='#6d28d9'>转译</text>
+    <text x='305' y='152' text-anchor='middle' font-size='12' fill='#334155'>类型剥离 / 语法降级</text>
+
+    <rect x='420' y='90' width='150' height='90' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='495' y='126' text-anchor='middle' font-size='15' font-weight='700' fill='#047857'>依赖分析</text>
+    <text x='495' y='152' text-anchor='middle' font-size='12' fill='#334155'>构建模块依赖图</text>
+
+    <rect x='610' y='90' width='150' height='90' rx='10' fill='#fffbeb' stroke='#d97706' stroke-width='2'/>
+    <text x='685' y='126' text-anchor='middle' font-size='15' font-weight='700' fill='#b45309'>打包与优化</text>
+    <text x='685' y='152' text-anchor='middle' font-size='12' fill='#334155'>摇树 / 压缩 / 分割</text>
+
+    <rect x='800' y='90' width='120' height='90' rx='10' fill='#0f172a'/>
+    <text x='860' y='126' text-anchor='middle' font-size='15' font-weight='700' fill='#ffffff'>产物</text>
+    <text x='860' y='152' text-anchor='middle' font-size='12' fill='#cbd5e1'>dist/</text>
+
+    <path d='M192 135 L226 135' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M382 135 L416 135' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M572 135 L606 135' stroke='#94a3b8' stroke-width='2'/>
+    <path d='M762 135 L796 135' stroke='#94a3b8' stroke-width='2'/>
+
+    <rect x='40' y='220' width='420' height='170' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='60' y='250' font-size='16' font-weight='700' fill='#1d4ed8'>开发态（快）</text>
+    <text x='60' y='278' font-size='13' fill='#334155'>按需编译，改哪个模块只编译哪个</text>
+    <text x='60' y='304' font-size='13' fill='#334155'>HMR 热更新：保留应用状态，不刷新整页</text>
+    <text x='60' y='330' font-size='13' fill='#334155'>sourcemap 完整，直接断点到源码</text>
+    <text x='60' y='356' font-size='13' fill='#64748b'>目标：毫秒级反馈，让试错成本接近零</text>
+
+    <rect x='500' y='220' width='420' height='170' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='520' y='250' font-size='16' font-weight='700' fill='#047857'>生产态（稳）</text>
+    <text x='520' y='278' font-size='13' fill='#334155'>完整构建：摇树去死代码、压缩混淆</text>
+    <text x='520' y='304' font-size='13' fill='#334155'>代码分割：首屏只加载当前路由所需</text>
+    <text x='520' y='330' font-size='13' fill='#334155'>资源指纹：内容变化才让缓存失效</text>
+    <text x='520' y='356' font-size='13' fill='#64748b'>目标：更小的体积、更快的首屏、可长期缓存</text>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 520' width='960' height='520' role='img' aria-label='事件循环结构示意图'>
+  <rect width='960' height='520' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='46' font-size='22' font-weight='700' fill='#0f172a'>事件循环：宏任务之间清空微任务</text>
+
+    <rect x='40' y='80' width='250' height='150' rx='10' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='60' y='108' font-size='16' font-weight='700' fill='#1d4ed8'>调用栈 Call Stack</text>
+    <text x='60' y='136' font-size='13' fill='#334155'>同步代码自上而下执行</text>
+    <text x='60' y='160' font-size='13' fill='#334155'>函数调用即入栈、返回即出栈</text>
+    <text x='60' y='184' font-size='13' fill='#334155'>栈清空后才轮到队列</text>
+    <text x='60' y='212' font-size='13' fill='#64748b'>栈里长时间不返回 = 页面卡死</text>
+
+    <rect x='360' y='80' width='250' height='150' rx='10' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='380' y='108' font-size='16' font-weight='700' fill='#6d28d9'>微任务队列</text>
+    <text x='380' y='136' font-size='13' fill='#334155'>Promise.then</text>
+    <text x='380' y='160' font-size='13' fill='#334155'>queueMicrotask</text>
+    <text x='380' y='184' font-size='13' fill='#334155'>MutationObserver</text>
+    <text x='380' y='212' font-size='13' font-weight='700' fill='#6d28d9'>优先级更高，必须一次性清空</text>
+
+    <rect x='680' y='80' width='240' height='150' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='700' y='108' font-size='16' font-weight='700' fill='#047857'>宏任务队列</text>
+    <text x='700' y='136' font-size='13' fill='#334155'>setTimeout / setInterval</text>
+    <text x='700' y='160' font-size='13' fill='#334155'>DOM 事件回调</text>
+    <text x='700' y='184' font-size='13' fill='#334155'>I/O（Node）</text>
+    <text x='700' y='212' font-size='13' font-weight='700' fill='#047857'>每轮只取出一个执行</text>
+
+    <path d='M165 250 L165 300 L480 300 L480 250' fill='none' stroke='#94a3b8' stroke-width='2' marker-end='url(#arrow)'/>
+    <defs>
+      <marker id='arrow' markerWidth='10' markerHeight='10' refX='6' refY='3' orient='auto'>
+        <path d='M0,0 L6,3 L0,6 Z' fill='#94a3b8'/>
+      </marker>
+    </defs>
+    <text x='480' y='326' text-anchor='middle' font-size='13' fill='#475569'>取出一个宏任务 → 执行到底 → 清空所有微任务 → 再取下一个宏任务</text>
+
+    <rect x='40' y='356' width='880' height='130' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='60' y='386' font-size='15' font-weight='700' fill='#0f172a'>按代码顺序预测输出（先想再运行）</text>
+    <text x='60' y='414' font-size='13' fill='#334155'>console.log(1 同步) → setTimeout(4 宏任务) → Promise.then(3 微任务) → console.log(2 同步)</text>
+    <text x='60' y='442' font-size='13' font-weight='700' fill='#1d4ed8'>实际输出：1 同步 → 2 同步 → 3 微任务 → 4 宏任务</text>
+    <text x='60' y='470' font-size='13' fill='#64748b'>记住：同步代码先全部跑完，再清微任务，最后才轮到宏任务。</text>
+  </g>
+</svg>

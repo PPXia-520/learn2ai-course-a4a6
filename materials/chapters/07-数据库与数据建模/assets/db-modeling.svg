@@ -1,0 +1,42 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 500' width='960' height='500' role='img' aria-label='博客系统数据建模示意图'>
+  <rect width='960' height='500' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='46' font-size='22' font-weight='700' fill='#0f172a'>博客系统数据建模：实体、关系与索引</text>
+
+    <rect x='380' y='90' width='200' height='120' rx='10' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='480' y='120' text-anchor='middle' font-size='16' font-weight='700' fill='#1d4ed8'>users</text>
+    <text x='480' y='146' text-anchor='middle' font-size='12' fill='#334155'>id · email(unique)</text>
+    <text x='480' y='168' text-anchor='middle' font-size='12' fill='#334155'>name · created_at</text>
+    <text x='480' y='192' text-anchor='middle' font-size='11' fill='#64748b'>PK: id</text>
+
+    <rect x='380' y='262' width='200' height='140' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='480' y='292' text-anchor='middle' font-size='16' font-weight='700' fill='#047857'>posts</text>
+    <text x='480' y='318' text-anchor='middle' font-size='12' fill='#334155'>id · author_id(FK)</text>
+    <text x='480' y='340' text-anchor='middle' font-size='12' fill='#334155'>title · slug(unique)</text>
+    <text x='480' y='362' text-anchor='middle' font-size='12' fill='#334155'>status · published_at</text>
+    <text x='480' y='384' text-anchor='middle' font-size='11' fill='#64748b'>冗余：comment_count</text>
+
+    <rect x='60' y='262' width='230' height='120' rx='10' fill='#fffbeb' stroke='#d97706' stroke-width='2'/>
+    <text x='175' y='292' text-anchor='middle' font-size='16' font-weight='700' fill='#b45309'>comments</text>
+    <text x='175' y='318' text-anchor='middle' font-size='12' fill='#334155'>id · post_id(FK)</text>
+    <text x='175' y='340' text-anchor='middle' font-size='12' fill='#334155'>user_id(FK) · content</text>
+    <text x='175' y='362' text-anchor='middle' font-size='11' fill='#64748b'>on delete cascade</text>
+
+    <rect x='670' y='262' width='230' height='120' rx='10' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='785' y='292' text-anchor='middle' font-size='16' font-weight='700' fill='#6d28d9'>post_tags</text>
+    <text x='785' y='318' text-anchor='middle' font-size='12' fill='#334155'>post_id(FK) · tag_id(FK)</text>
+    <text x='785' y='340' text-anchor='middle' font-size='12' fill='#334155'>复合主键去重</text>
+    <text x='785' y='362' text-anchor='middle' font-size='11' fill='#64748b'>多对多的中间表</text>
+
+    <path d='M480 214 L480 258' stroke='#94a3b8' stroke-width='2'/>
+    <text x='492' y='240' font-size='12' fill='#475569'>1 : N</text>
+    <path d='M290 322 L376 322' stroke='#94a3b8' stroke-width='2'/>
+    <text x='300' y='312' font-size='12' fill='#475569'>N : 1</text>
+    <path d='M584 322 L666 322' stroke='#94a3b8' stroke-width='2'/>
+    <text x='604' y='312' font-size='12' fill='#475569'>N : M</text>
+
+    <rect x='60' y='408' width='840' height='72' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='80' y='436' font-size='14' font-weight='700' fill='#0f172a'>核心索引策略</text>
+    <text x='80' y='462' font-size='13' fill='#334155'>posts (author_id, published_at desc) where status = 'published'　|　comments (post_id, created_at desc)　|　唯一索引 users(email)</text>
+  </g>
+</svg>

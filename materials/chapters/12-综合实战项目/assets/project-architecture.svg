@@ -1,0 +1,36 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 520' width='960' height='520' role='img' aria-label='全栈项目架构与交付物全景图'>
+  <rect width='960' height='520' fill='#f8fafc'/>
+  <defs>
+    <marker id='b' markerWidth='10' markerHeight='10' refX='6' refY='3' orient='auto'>
+      <path d='M0,0 L6,3 L0,6 Z' fill='#94a3b8'/>
+    </marker>
+  </defs>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='44' font-size='22' font-weight='700' fill='#0f172a'>全栈项目：技术架构与交付物</text>
+
+    <rect x='60' y='76' width='840' height='64' rx='10' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='80' y='102' font-size='14' font-weight='700' fill='#1d4ed8'>前端：React + TypeScript + Vite</text>
+    <text x='80' y='126' font-size='12' fill='#334155'>路由与 URL 状态 · 数据请求与缓存 · 加载/错误/空三态 · 表单校验 · 组件测试</text>
+
+    <rect x='60' y='156' width='840' height='64' rx='10' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='80' y='182' font-size='14' font-weight='700' fill='#047857'>后端：Node + TypeScript（分层架构）</text>
+    <text x='80' y='206' font-size='12' fill='#334155'>路由 → 中间件（认证/校验/日志）→ 服务 → 数据访问 · 统一错误处理 · 幂等与限流</text>
+
+    <rect x='60' y='236' width='400' height='64' rx='10' fill='#dbeafe' stroke='#2563eb' stroke-width='2'/>
+    <text x='80' y='262' font-size='14' font-weight='700' fill='#1d4ed8'>数据：PostgreSQL + 迁移</text>
+    <text x='80' y='286' font-size='12' fill='#334155'>索引 · 事务 · 约束兜底 · 缓存（Redis）</text>
+
+    <rect x='500' y='236' width='400' height='64' rx='10' fill='#fffbeb' stroke='#d97706' stroke-width='2'/>
+    <text x='520' y='262' font-size='14' font-weight='700' fill='#b45309'>交付：Docker + CI/CD</text>
+    <text x='520' y='286' font-size='12' fill='#334155'>多阶段镜像 · 流水线四步 · 部署与回滚</text>
+
+    <rect x='60' y='324' width='840' height='84' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='80' y='350' font-size='14' font-weight='700' fill='#0f172a'>必备交付文档</text>
+    <text x='80' y='374' font-size='12' fill='#334155'>README（10 分钟上手）　·　requirements.md（故事与验收标准、不做清单）</text>
+    <text x='80' y='396' font-size='12' fill='#334155'>design.md（架构图 · 数据模型 · 接口清单 · ADR 取舍）　·　deployment.md（部署与回滚步骤）</text>
+
+    <rect x='60' y='424' width='840' height='72' rx='10' fill='#f1f5f9' stroke='#64748b' stroke-width='2'/>
+    <text x='80' y='450' font-size='14' font-weight='700' fill='#0f172a'>验收四问</text>
+    <text x='80' y='474' font-size='12' fill='#334155'>陌生人能跑起来吗？　权限测试通过吗？　CI 是否全绿？　能否 5 分钟讲清问题、方案、难点与结果？</text>
+  </g>
+</svg>

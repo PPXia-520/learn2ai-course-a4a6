@@ -1,0 +1,38 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 440' width='960' height='440' role='img' aria-label='职业成长阶段与跃迁路径图'>
+  <rect width='960' height='440' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='40' y='46' font-size='22' font-weight='700' fill='#0f172a'>成长路径：三次关键跃迁</text>
+
+    <rect x='40' y='86' width='270' height='150' rx='12' fill='#eff6ff' stroke='#2563eb' stroke-width='2'/>
+    <text x='175' y='118' text-anchor='middle' font-size='17' font-weight='700' fill='#1d4ed8'>① 入门 → 独立</text>
+    <text x='60' y='150' font-size='13' fill='#334155'>从「跟着教程」到</text>
+    <text x='60' y='174' font-size='13' fill='#334155'>「自己查文档解决问题」</text>
+    <text x='60' y='202' font-size='12' fill='#64748b'>标志：能独立调试、拆需求、交付</text>
+    <text x='60' y='224' font-size='12' fill='#64748b'>对应：第 01–06 章</text>
+
+    <rect x='345' y='86' width='270' height='150' rx='12' fill='#ecfdf5' stroke='#059669' stroke-width='2'/>
+    <text x='480' y='118' text-anchor='middle' font-size='17' font-weight='700' fill='#047857'>② 独立 → 设计</text>
+    <text x='365' y='150' font-size='13' fill='#334155'>从「实现需求」到</text>
+    <text x='365' y='174' font-size='13' fill='#334155'>「判断该怎么实现」</text>
+    <text x='365' y='202' font-size='12' fill='#64748b'>标志：能做选型、写设计文档、评估风险</text>
+    <text x='365' y='224' font-size='12' fill='#64748b'>对应：第 07–11 章</text>
+
+    <rect x='650' y='86' width='270' height='150' rx='12' fill='#f5f3ff' stroke='#7c3aed' stroke-width='2'/>
+    <text x='785' y='118' text-anchor='middle' font-size='17' font-weight='700' fill='#6d28d9'>③ 设计 → 影响</text>
+    <text x='670' y='150' font-size='13' fill='#334155'>从「做好自己的事」到</text>
+    <text x='670' y='174' font-size='13' fill='#334155'>「让别人也做得更好」</text>
+    <text x='670' y='202' font-size='12' fill='#64748b'>标志：规范、评审、带人、沉淀文档</text>
+    <text x='670' y='224' font-size='12' fill='#64748b'>对应：第 09、12、13 章</text>
+
+    <path d='M314 161 L341 161' stroke='#94a3b8' stroke-width='3'/>
+    <path d='M619 161 L646 161' stroke='#94a3b8' stroke-width='3'/>
+
+    <rect x='40' y='266' width='880' height='60' rx='10' fill='#ffffff' stroke='#cbd5e1'/>
+    <text x='60' y='292' font-size='14' font-weight='700' fill='#0f172a'>让能力被看见</text>
+    <text x='60' y='314' font-size='12' fill='#334155'>可访问的作品集　·　能量化的 STAR 经历　·　能讲清取舍的设计文档　·　持续的技术输出</text>
+
+    <rect x='40' y='344' width='880' height='72' rx='10' fill='#fffbeb' stroke='#d97706' stroke-width='2'/>
+    <text x='60' y='372' font-size='14' font-weight='700' fill='#b45309'>四个固定机制（靠机制，不靠意志）</text>
+    <text x='60' y='396' font-size='12' fill='#334155'>每周学习日志　·　每月一次输出（笔记或分享）　·　每月读一个开源项目　·　每季度四象限能力盘点</text>
+  </g>
+</svg>

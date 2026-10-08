@@ -1,0 +1,32 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 400' width='960' height='400' role='img' aria-label='Git 分支协作流程图'>
+  <rect width='960' height='400' fill='#f8fafc'/>
+  <g font-family='Microsoft YaHei,PingFang SC,Noto Sans CJK SC,sans-serif'>
+    <text x='60' y='46' font-size='22' font-weight='700' fill='#0f172a'>Git 协作流程：短分支 · 勤合并 · 只合不推主干</text>
+
+    <line x1='60' y1='260' x2='920' y2='260' stroke='#94a3b8' stroke-width='3'/>
+    <text x='60' y='292' font-size='14' font-weight='700' fill='#334155'>main</text>
+
+    <path d='M260 260 C 300 260 300 140 340 140 L 640 140 C 680 140 680 260 720 260' fill='none' stroke='#2563eb' stroke-width='3'/>
+    <text x='360' y='120' font-size='14' font-weight='700' fill='#1d4ed8'>feat/user-profile（短分支）</text>
+
+    <circle cx='110' cy='260' r='9' fill='#0f172a'/>
+    <text x='110' y='330' text-anchor='middle' font-size='12' fill='#475569'>最新 main</text>
+    <circle cx='260' cy='260' r='9' fill='#0f172a'/>
+    <text x='262' y='330' text-anchor='middle' font-size='12' fill='#475569'>切出分支</text>
+    <circle cx='400' cy='140' r='8' fill='#2563eb'/>
+    <circle cx='500' cy='140' r='8' fill='#2563eb'/>
+    <circle cx='600' cy='140' r='8' fill='#2563eb'/>
+    <text x='510' y='172' text-anchor='middle' font-size='12' fill='#1d4ed8'>小步提交 feat / fix</text>
+    <circle cx='660' cy='140' r='9' fill='#7c3aed'/>
+    <text x='676' y='128' font-size='12' fill='#6d28d9'>PR 评审</text>
+    <circle cx='720' cy='260' r='9' fill='#059669'/>
+    <text x='722' y='330' text-anchor='middle' font-size='12' fill='#047857'>合并回 main</text>
+    <circle cx='860' cy='260' r='9' fill='#d97706'/>
+    <text x='860' y='330' text-anchor='middle' font-size='12' fill='#b45309'>打 tag / 部署</text>
+
+    <rect x='60' y='352' width='420' height='36' rx='8' fill='#ecfdf5' stroke='#059669'/>
+    <text x='76' y='376' font-size='13' fill='#047857'>推荐：git fetch 后自行 merge，冲突在自己机器上解决</text>
+    <rect x='500' y='352' width='420' height='36' rx='8' fill='#fef2f2' stroke='#dc2626'/>
+    <text x='516' y='376' font-size='13' fill='#b91c1c'>禁止：对 main 执行 git push --force，历史会丢</text>
+  </g>
+</svg>
